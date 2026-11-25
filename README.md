@@ -1,3 +1,5 @@
+<img width="1115" height="917" alt="image" src="https://github.com/user-attachments/assets/1b29a16d-5588-4e4a-97f4-5f8a43c6c61f" />
+
 # Sophos Firewall Object Manager
 
 An unofficial Windows desktop tool for importing, exporting, and scheduling Sophos Firewall address objects, groups, and rules.
