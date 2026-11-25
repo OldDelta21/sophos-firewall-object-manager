@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>SOPHOS_Host___Addresses_Manager</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>Sophos.ico</ApplicationIcon>
+    <RuntimeIdentifier Condition="'$(RuntimeIdentifier)' == ''">win-x64</RuntimeIdentifier>
+    <SelfContained>true</SelfContained>
+    <PublishSingleFile>true</PublishSingleFile>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <DebugType>embedded</DebugType>
+    <OutputPath>obj\build\$(Configuration)\</OutputPath>
+    <PublishDir Condition="'$(PublishDir)' == ''">$(MSBuildProjectDirectory)\bin\$(Configuration)\$(RuntimeIdentifier)\</PublishDir>
+    <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
+  </PropertyGroup>
+
+  <Target Name="BundleExecutableAfterBuild" AfterTargets="Build"
+          Condition="'$(DesignTimeBuild)' != 'true' and '$(NoBuild)' != 'true'">
+    <MSBuild Projects="$(MSBuildProjectFullPath)" Targets="Publish"
+             Properties="NoBuild=true;Configuration=$(Configuration);RuntimeIdentifier=$(RuntimeIdentifier)" />
+  </Target>
+
+</Project>
