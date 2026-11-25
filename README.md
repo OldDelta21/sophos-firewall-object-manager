@@ -1,4 +1,5 @@
-<img width="1115" height="917" alt="image" src="https://github.com/user-attachments/assets/1b29a16d-5588-4e4a-97f4-5f8a43c6c61f" />
+<img width="1111" height="915" alt="image" src="https://github.com/user-attachments/assets/11108e13-2efe-47a4-bc46-87f337ab1cb3" />
+
 
 # Sophos Firewall Object Manager
 
